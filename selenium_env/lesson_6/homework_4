@@ -1,0 +1,13 @@
+from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By
+import time
+
+service = Service(ChromeDriverManager().install())
+driver = webdriver.Chrome(service=service)
+
+driver.get("https://testautomationpractice.blogspot.com/")
+print(len(driver.find_elements("tag name", "button")))
+driver.find_elements("tag name", "button")[4].click()
+time.sleep (5)
