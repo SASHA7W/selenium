@@ -19,6 +19,10 @@ BUTTON_TIMER = wait.until(EC.element_to_be_clickable(BUTTON))
 BUTTON_TIMER.click()
 print("Button is clickable now")
 
-#wait.until(EC.alert_is_present())
-#ALERT = driver.find_element("xpath", "//input[contains(@id, 'alert2')]")
-#ALERT.click()
+alert = wait.until(EC.alert_is_present())
+print("alert is present now")
+driver.switch_to.alert
+print(alert.text)
+alert.accept()
+print("alert was closed")
+
