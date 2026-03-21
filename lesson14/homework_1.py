@@ -4,7 +4,6 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 import time
-from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import os
 import pickle
@@ -19,10 +18,4 @@ driver.add_cookie({'name': "username", 'value': "user123"})
 driver.refresh()
 cookie_username = driver.get_cookie("username")
 print(cookie_username)
-allCookies = driver.get_cookies()
-time.sleep(5)
-driver.delete_cookie()
-driver.refresh()
-time.sleep(5)
-driver.add_cookie(allCookies)
-driver.refresh()
+

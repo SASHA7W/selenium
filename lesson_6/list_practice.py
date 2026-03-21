@@ -12,5 +12,5 @@ driver.get("https://demowebshop.tricentis.com/books")
 
 
 ELEMENTS = driver.find_elements(By.CLASS_NAME, "btn-wrap") # Находим все элементы h2
-print(ELEMENTS[10])
+print(ELEMENTS)
 
